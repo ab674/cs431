@@ -1,0 +1,394 @@
+CREATE TABLE Library (
+	Id INT(8),
+	Title VARCHAR(255),
+	Artist VARCHAR(255),
+	Collection VARCHAR(255),
+	MediaType VARCHAR(255),
+	PRIMARY KEY (Id) 
+) ENGINE=InnoDB;
+
+INSERT INTO Library VALUES(1, 'Harry Potter and the Philosopher\'s Stone', 'J\. K\. Rowling', 'Harry Potter', 'Books');
+INSERT INTO Library VALUES(2, 'Harry Potter and the Chamber of Secrets', 'J\. K\. Rowling', 'Harry Potter', 'Books');
+INSERT INTO Library VALUES(3, 'Harry Potter and the Prisoner of Azkaban', 'J\. K\. Rowling', 'Harry Potter', 'Books');
+INSERT INTO Library VALUES(4, 'Harry Potter and the Goblet of Fire', 'J\. K\. Rowling', 'Harry Potter', 'Books');
+INSERT INTO Library VALUES(5, 'Harry Potter and the Order of the Phoenix', 'J\. K\. Rowling', 'Harry Potter', 'Books');
+INSERT INTO Library VALUES(6, 'Harry Potter and the Half\-Blood Prince', 'J\. K\. Rowling', 'Harry Potter', 'Books');
+INSERT INTO Library VALUES(7, 'Harry Potter and the Deathly Hallows', 'J\. K\. Rowling', 'Harry Potter', 'Books');
+INSERT INTO Library VALUES(8, 'American Dervish', 'Ayad Akhtar', '', 'Books');
+INSERT INTO Library VALUES(9, 'Cell', 'Stephen King', '', 'Books');
+INSERT INTO Library VALUES(10, 'Cell', 'Stephen King', '', 'Books');
+INSERT INTO Library VALUES(11, 'Found', 'Margaret Peterson Haddix', 'The Missing', 'Books');
+INSERT INTO Library VALUES(12, 'Sent', 'Margaret Peterson Haddix', 'The Missing', 'Books');
+INSERT INTO Library VALUES(13, 'Sabotaged', 'Margaret Peterson Haddix', 'The Missing', 'Books');
+INSERT INTO Library VALUES(14, 'Limitless', 'Neil Burger', '', 'Movies');
+INSERT INTO Library VALUES(15, 'Hush', 'Mike Flanagan', '', 'Movies');
+INSERT INTO Library VALUES(16, 'The Hunger Games', 'Gary Ross', 'The Hunger Games', 'Movies');
+INSERT INTO Library VALUES(17, 'Catching Fire', 'Gary Ross', 'The Hunger Games', 'Movies');
+INSERT INTO Library VALUES(18, 'Mockingjay Part 1', 'Gary Ross', 'The Hunger Games', 'Movies');
+INSERT INTO Library VALUES(19, 'Mockingjay Part 2', 'Gary Ross', 'The Hunger Games', 'Movies');
+INSERT INTO Library VALUES(20, 'Forever', 'Majid Jordan', 'A Place Like This', 'Music');
+INSERT INTO Library VALUES(21, 'All I Do', 'Majid Jordan', 'A Place Like This', 'Music');
+INSERT INTO Library VALUES(22, 'Her', 'Majid Jordan', 'A Place Like This', 'Music');
+INSERT INTO Library VALUES(23, 'U', 'Majid Jordan', 'A Place Like This', 'Music');
+INSERT INTO Library VALUES(24, 'A Place Like This', 'Majid Jordan', 'A Place Like This', 'Music');
+INSERT INTO Library VALUES(25, 'Houstatlantavegas', 'Drake', 'So Far Gone', 'Music');
+INSERT INTO Library VALUES(26, 'Successful', 'Drake', 'So Far Gone', 'Music');
+INSERT INTO Library VALUES(27, 'Best I Ever Had', 'Drake', 'So Far Gone', 'Music');
+INSERT INTO Library VALUES(28, 'Uptown', 'Drake', 'So Far Gone', 'Music');
+INSERT INTO Library VALUES(29, 'I\'m Goin\' In', 'Drake', 'So Far Gone', 'Music');
+INSERT INTO Library VALUES(30, 'The Calm', 'Drake', 'So Far Gone', 'Music');
+INSERT INTO Library VALUES(31, 'Fear', 'Drake', 'So Far Gone', 'Music');
+INSERT INTO Library VALUES(32, 'March Madness', 'Future', 'March Madness - Single', 'Music');
+INSERT INTO Library VALUES(33, 'A Study in Pink', 'Mark Gatiss and Steven Moffat', 'Sherlock', 'TVShows');
+INSERT INTO Library VALUES(34, 'The Blind Banker', 'Mark Gatiss and Steven Moffat', 'Sherlock', 'TVShows');
+INSERT INTO Library VALUES(35, 'The Great Game', 'Mark Gatiss and Steven Moffat', 'Sherlock', 'TVShows');
+INSERT INTO Library VALUES(36, 'A Scandal in Belgravia', 'Mark Gatiss and Steven Moffat', 'Sherlock', 'TVShows');
+INSERT INTO Library VALUES(37, 'The Hounds of Baskerville', 'Mark Gatiss and Steven Moffat', 'Sherlock', 'TVShows');
+INSERT INTO Library VALUES(38, 'The Reichenbach Fall', 'Mark Gatiss and Steven Moffat', 'Sherlock', 'TVShows');
+INSERT INTO Library VALUES(39, 'Many Happy Returns', 'Mark Gatiss and Steven Moffat', 'Sherlock', 'TVShows');
+INSERT INTO Library VALUES(40, 'The Empty Hearse', 'Mark Gatiss and Steven Moffat', 'Sherlock', 'TVShows');
+INSERT INTO Library VALUES(41, 'The Sign of Three', 'Mark Gatiss and Steven Moffat', 'Sherlock', 'TVShows');
+INSERT INTO Library VALUES(42, 'His Last Vow', 'Mark Gatiss and Steven Moffat', 'Sherlock', 'TVShows');
+INSERT INTO Library VALUES(43, 'Pilot', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(44, 'Badge\! Gun\!', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(45, 'The Legend of Marcos Ramos', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(46, 'Page 44', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(47, 'Personality Crisis', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(48, 'Side Effects May Include\.\.\.', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(49, 'Brian Finch\'s Black Op', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(50, 'When Pirates Pirate Pirates', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(51, 'Headquarters\!', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(52, 'Arm\-ageddon', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(53, 'This is Your Brian on Drugs', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(54, 'The Assassination of Eddie Morra', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(55, 'Stop Me Before I Hug Again', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(56, 'Fundamentals of Naked Portraiture', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(57, 'Undercover\!', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(58, 'Sands\, Agent of Morra', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(59, 'Close Encounters', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(60, 'Bezgranichnyy', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(61, 'A Dog\'s Breakfast', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(62, 'Hi\, My Name is Rebecca Harris', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(63, 'Finale\, Part 1\!', 'Christa Abert', 'Limitless', 'TVShows');
+INSERT INTO Library VALUES(64, 'Finale\, Part 2\!\!', 'Christa Abert', 'Limitless', 'TVShows');
+
+CREATE TABLE Books (
+	Id INT(8),
+	Title VARCHAR(255),
+	Author VARCHAR(255),
+	Series VARCHAR(255),
+	BookNumber INT(8),
+	Type VARCHAR(255),
+	Pages INT,
+	DigitalSize DOUBLE(3,1),
+	Rating INT(8),
+	Genre VARCHAR(255),
+	DateAdded DATE,
+	DateReleased DATE,
+	PRIMARY KEY (Author, Series, Type, BookNumber, Title) 
+) ENGINE=InnoDB;
+
+INSERT INTO Books VALUES(1, 'Harry Potter and the Philosopher\'s Stone', 'J\. K\. Rowling', 'Harry Potter', 1, 'Digital', 332, 03.5, 7, 'Fantasy', '2010-04-09', '1998-09-01');
+INSERT INTO Books VALUES(2, 'Harry Potter and the Chamber of Secrets', 'J\. K\. Rowling', 'Harry Potter', 2, 'Digital', 341, 03.6, 9, 'Fantasy', '2010-04-09', '1999-06-02');
+INSERT INTO Books VALUES(3, 'Harry Potter and the Prisoner of Azkaban', 'J\. K\. Rowling', 'Harry Potter', 3, 'Digital', 435, 04.5, 8, 'Fantasy', '2010-04-09', '1999-09-08');
+INSERT INTO Books VALUES(4, 'Harry Potter and the Goblet of Fire', 'J\. K\. Rowling', 'Harry Potter', 4, 'Digital', 734, 07.1, 10, 'Fantasy', '2010-04-09', '2000-07-028');
+INSERT INTO Books VALUES(5, 'Harry Potter and the Order of the Phoenix', 'J\. K\. Rowling', 'Harry Potter', 5, 'Digital', 807, 08.4, 7, 'Fantasy', '2010-04-09', '2003-06-21');
+INSERT INTO Books VALUES(6, 'Harry Potter and the Half\-Blood Prince', 'J\. K\. Rowling', 'Harry Potter', 6, 'Digital', 652, 06.8, 10, 'Fantasy', '2010-04-09', '2005-07-16');
+INSERT INTO Books VALUES(7, 'Harry Potter and the Deathly Hallows', 'J\. K\. Rowling', 'Harry Potter', 7, 'Digital', 759, 08.0, 10, 'Fantasy', '2010-04-09', '2007-07-21');
+INSERT INTO Books VALUES(8, 'American Dervish', 'Ayad Akhtar', '', 1, 'Print', 352, 00.0, 9, 'Adventure', '2015-05-14', '2012-01-09');
+INSERT INTO Books VALUES(9, 'Cell', 'Stephen King', '', 1, 'Print', 350, 00.0, 9, 'Horror', '2008-11-15', '2006-01-24');
+INSERT INTO Books VALUES(10, 'Cell', 'Stephen King', '', 1, 'Digital', 384, 04.0, 9, 'Horror', '2016-03-01', '2006-01-25');
+INSERT INTO Books VALUES(11, 'Found', 'Margaret Peterson Haddix', 'The Missing', 1, 'Print', 336, 00.0, 10, 'Science Fiction', '2015-03-15', '2009-04-21');
+INSERT INTO Books VALUES(12, 'Sent', 'Margaret Peterson Haddix', 'The Missing', 2, 'Print', 313, 00.0, 9, 'Science Fiction', '2015-05-17', '2010-08-03');
+INSERT INTO Books VALUES(13, 'Sabotaged', 'Margaret Peterson Haddix', 'The Missing', 3, 'Print', 400, 00.0, 9, 'Science Fiction', '2015-06-22', '2011-08-23');
+
+CREATE TABLE Movies (
+	Id INT(8),
+	Title VARCHAR(255),
+	Director VARCHAR(255),
+	Series VARCHAR(255),
+	MovieNumber INT(8),
+	DigitalSize DOUBLE(5,1),
+	Length TIME,
+	Rating INT(8),
+	Genre VARCHAR(255),
+	Views INT(8),
+	DateAdded DATE,
+	DateReleased DATE,
+	PRIMARY KEY (Series, MovieNumber, Title) 
+) ENGINE=InnoDB;
+
+INSERT INTO Movies VALUES(14, 'Limitless', 'Neil Burger', '', 1, 3520.0, '01:45:13', 8, 'Thriller', 0, '2016-02-24', '2011-03-18');
+INSERT INTO Movies VALUES(15, 'Hush', 'Mike Flanagan', '', 1, 2280.0, '01:21:00', 6, 'Horror', 1, '2016-07-02', '2016-03-12');
+INSERT INTO Movies VALUES(16, 'The Hunger Games', 'Gary Ross', 'The Hunger Games', 1, 2080.0, '02:02:15', 10, 'Action', 2, '2014-09-02', '2012-03-12');
+INSERT INTO Movies VALUES(17, 'Catching Fire', 'Gary Ross', 'The Hunger Games', 2, 5200.0, '02:26:47', 8, 'Action', 1, '2016-09-02', '2013-11-22');
+INSERT INTO Movies VALUES(18, 'Mockingjay Part 1', 'Gary Ross', 'The Hunger Games', 3, 4480.0, '02:02:09', 9, 'Action', 1, '2016-09-07', '2014-11-10');
+INSERT INTO Movies VALUES(19, 'Mockingjay Part 2', 'Gary Ross', 'The Hunger Games', 4, 4930.0, '02:16:00', 8, 'Action', 0, '2016-09-15', '2015-11-20');
+
+CREATE TABLE Music (
+	Id INT(8),
+	Title VARCHAR(255),
+	Artist VARCHAR(255),
+	Album VARCHAR(255),
+	TrackNumber INT(8),
+	DigitalSize DOUBLE(3,1),
+	Length TIME,
+	Rating INT(8),
+	Genre VARCHAR(255),
+	Plays INT(8),
+	DateAdded DATE,
+	DateReleased DATE,
+	PRIMARY KEY (Artist, Album, TrackNumber) 
+) ENGINE=InnoDB;
+
+INSERT INTO Music VALUES(20, 'Forever', 'Majid Jordan', 'A Place Like This', 1, 08.9, '00:04:16', 10, 'R&B', 420, '2014-07-18', '2014-07-17');
+INSERT INTO Music VALUES(21, 'All I Do', 'Majid Jordan', 'A Place Like This', 2, 07.2, '00:03:35', 10, 'R&B', 436, '2014-07-18', '2014-07-17');
+INSERT INTO Music VALUES(22, 'Her', 'Majid Jordan', 'A Place Like This', 3, 09.7, '00:05:01', 10, 'R&B', 420, '2014-07-18', '2014-07-17');
+INSERT INTO Music VALUES(23, 'U', 'Majid Jordan', 'A Place Like This', 4, 10.2, '00:05:07', 10, 'R&B', 420, '2014-07-18', '2014-07-17');
+INSERT INTO Music VALUES(24, 'A Place Like This', 'Majid Jordan', 'A Place Like This', 5, 08.8, '00:04:22', 10, 'R&B', 420, '2014-07-18', '2014-07-17');
+INSERT INTO Music VALUES(25, 'Houstatlantavegas', 'Drake', 'So Far Gone', 1, 04.9, '00:04:50', 8, 'Hip-Hop/Rap', 40, '2009-09-18', '2009-09-17');
+INSERT INTO Music VALUES(26, 'Successful', 'Drake', 'So Far Gone', 2, 08.6, '00:05:51', 10, 'Hip-Hop/Rap', 36, '2009-09-18', '2009-09-17');
+INSERT INTO Music VALUES(27, 'Best I Ever Had', 'Drake', 'So Far Gone', 3, 06.0, '00:04:17', 10, 'Hip-Hop/Rap', 42, '2009-09-18', '2009-09-17');
+INSERT INTO Music VALUES(28, 'Uptown', 'Drake', 'So Far Gone', 4, 09.4, '00:06:21', 10, 'Hip-Hop/Rap', 38, '2009-09-18', '2009-09-17');
+INSERT INTO Music VALUES(29, 'I\'m Goin\' In', 'Drake', 'So Far Gone', 5, 06.8, '00:03:45', 10, 'Hip-Hop/Rap', 87, '2009-09-18', '2014-09-17');
+INSERT INTO Music VALUES(30, 'The Calm', 'Drake', 'So Far Gone', 6, 05.6, '00:04:06', 9, 'Hip-Hop/Rap', 12, '2009-09-18', '2014-09-17');
+INSERT INTO Music VALUES(31, 'Fear', 'Drake', 'So Far Gone', 7, 08.8, '00:04:40', 6, 'Hip-Hop/Rap', 54, '2009-09-18', '2014-09-17');
+INSERT INTO Music VALUES(32, 'March Madness', 'Future', 'March Madness - Single', 1, 08.2, '00:04:05', 10, 'Hip-Hop/Rap', 283, '2016-03-15', '2015-08-31');
+
+CREATE TABLE TVShows (
+	Id INT(8),
+	Title VARCHAR(255),
+	Director VARCHAR(255),
+	Series VARCHAR(255),
+	Season INT(8),
+	EpisodeNumber INT(8),
+	DigitalSize DOUBLE(5,1),
+	Length TIME,
+	Rating INT(8),
+	Genre VARCHAR(255),
+	Views INT(8),
+	DateAdded DATE,
+	DateReleased DATE,
+	PRIMARY KEY (Series, Season, EpisodeNumber) 
+) ENGINE=InnoDB;
+
+INSERT INTO TVShows VALUES(33, 'A Study in Pink', 'Mark Gatiss and Steven Moffat', 'Sherlock', 1, 1, 3080.0, '01:28:45', 10, 'Crime Drama', 2, '2016-07-18', '2010-10-24');
+INSERT INTO TVShows VALUES(34, 'The Blind Banker', 'Mark Gatiss and Steven Moffat', 'Sherlock', 1, 2, 3130.5, '01:28:16', 7, 'Crime Drama', 2, '2016-07-18', '2010-10-31');
+INSERT INTO TVShows VALUES(35, 'The Great Game', 'Mark Gatiss and Steven Moffat', 'Sherlock', 1, 3, 3195.2, '01:29:36', 10, 'Crime Drama', 2, '2016-07-18', '2010-11-07');
+INSERT INTO TVShows VALUES(36, 'A Scandal in Belgravia', 'Mark Gatiss and Steven Moffat', 'Sherlock', 2, 1, 3050.7, '01:29:35', 9, 'Crime Drama', 2, '2016-07-18', '2012-05-06');
+INSERT INTO TVShows VALUES(37, 'The Hounds of Baskerville', 'Mark Gatiss and Steven Moffat', 'Sherlock', 2, 2, 3036.0, '01:28:14', 10, 'Crime Drama', 2, '2016-07-18', '2012-05-13');
+INSERT INTO TVShows VALUES(38, 'The Reichenbach Fall', 'Mark Gatiss and Steven Moffat', 'Sherlock', 2, 3, 3057.8, '01:28:52', 10, 'Crime Drama', 2, '2016-07-18', '2012-05-20');
+INSERT INTO TVShows VALUES(39, 'Many Happy Returns', 'Mark Gatiss and Steven Moffat', 'Sherlock', 3, 1, 1045.6, '00:34:42', 9, 'Crime Drama', 1, '2016-07-18', '2013-12-24');
+INSERT INTO TVShows VALUES(40, 'The Empty Hearse', 'Mark Gatiss and Steven Moffat', 'Sherlock', 3, 2, 2925.6, '00:26:45', 10, 'Crime Drama', 1, '2016-07-18', '2014-01-19');
+INSERT INTO TVShows VALUES(41, 'The Sign of Three', 'Mark Gatiss and Steven Moffat', 'Sherlock', 3, 3, 3046.8, '00:26:49', 8, 'Crime Drama', 0, '2016-07-18', '2014-01-26');
+INSERT INTO TVShows VALUES(42, 'His Last Vow', 'Mark Gatiss and Steven Moffat', 'Sherlock', 3, 4, 3104.0, '01:29:00', 8, 'Crime Drama', 0, '2016-07-18', '2014-02-02');
+INSERT INTO TVShows VALUES(43, 'Pilot', 'Christa Abert', 'Limitless', 1, 1, 1520.5, '00:43:37', 10, 'Crime Drama', 1, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(44, 'Badge\! Gun\!', 'Christa Abert', 'Limitless', 1, 2, 1520.5, '00:41:42', 10, 'Crime Drama', 1, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(45, 'The Legend of Marcos Ramos', 'Christa Abert', 'Limitless', 1, 3, 1520.5, '00:44:37', 10, 'Crime Drama', 1, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(46, 'Page 44', 'Christa Abert', 'Limitless', 1, 4, 1520.5, '00:43:37', 10, 'Crime Drama', 1, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(47, 'Personality Crisis', 'Christa Abert', 'Limitless', 1, 5, 1520.5, '00:44:37', 10, 'Crime Drama', 1, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(48, 'Side Effects May Include\.\.\.', 'Christa Abert', 'Limitless', 1, 6, 1520.5, '00:42:37', 10, 'Crime Drama', 1, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(49, 'Brian Finch\'s Black Op', 'Christa Abert', 'Limitless', 1, 7, 1520.5, '00:43:37', 10, 'Crime Drama', 1, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(50, 'When Pirates Pirate Pirates', 'Christa Abert', 'Limitless', 1, 8, 1520.5, '00:41:37', 10, 'Crime Drama', 1, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(51, 'Headquarters\!', 'Christa Abert', 'Limitless', 1, 9, 1520.5, '00:43:37', 10, 'Crime Drama', 1, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(52, 'Arm\-ageddon', 'Christa Abert', 'Limitless', 1, 10, 1520.5, '00:44:37', 10, 'Crime Drama', 1, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(53, 'This is Your Brian on Drugs', 'Christa Abert', 'Limitless', 1, 11, 1520.5, '00:43:37', 10, 'Crime Drama', 1, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(54, 'The Assassination of Eddie Morra', 'Christa Abert', 'Limitless', 1, 12, 1520.5, '00:43:37', 10, 'Crime Drama', 1, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(55, 'Stop Me Before I Hug Again', 'Christa Abert', 'Limitless', 1, 13, 1520.5, '00:42:37', 10, 'Crime Drama', 0, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(56, 'Fundamentals of Naked Portraiture', 'Christa Abert', 'Limitless', 1, 14, 1520.5, '00:43:37', 10, 'Crime Drama', 0, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(57, 'Undercover\!', 'Christa Abert', 'Limitless', 1, 15, 1520.5, '00:41:42', 10, 'Crime Drama', 0, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(58, 'Sands\, Agent of Morra', 'Christa Abert', 'Limitless', 1, 16, 1520.5, '00:42:37', 10, 'Crime Drama', 0, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(59, 'Close Encounters', 'Christa Abert', 'Limitless', 1, 17, 1520.5, '00:42:37', 10, 'Crime Drama', 0, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(60, 'Bezgranichnyy', 'Christa Abert', 'Limitless', 1, 18, 1520.5, '00:43:37', 10, 'Crime Drama', 0, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(61, 'A Dog\'s Breakfast', 'Christa Abert', 'Limitless', 1, 19, 1520.5, '00:41:37', 10, 'Crime Drama', 0, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(62, 'Hi\, My Name is Rebecca Harris', 'Christa Abert', 'Limitless', 1, 20, 1520.5, '00:42:37', 10, 'Crime Drama', 0, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(63, 'Finale\, Part 1\!', 'Christa Abert', 'Limitless', 1, 21, 1520.5, '00:44:42', 10, 'Crime Drama', 0, '2016-08-15', '2015-09-22');
+INSERT INTO TVShows VALUES(64, 'Finale\, Part 2\!\!', 'Christa Abert', 'Limitless', 1, 22, 1520.5, '00:43:37', 10, 'Crime Drama', 0, '2016-08-15', '2015-09-22');
+
+DELIMITER //
+
+CREATE PROCEDURE FavoriteSongs()
+BEGIN
+SELECT *
+FROM Music
+WHERE Plays > 100;
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE UnwatchedMovies()
+BEGIN
+SELECT *
+FROM Movies
+WHERE Views = 0;
+END //
+
+CREATE PROCEDURE UnplayedMusic()
+BEGIN
+SELECT *
+FROM Music
+WHERE Plays = 0;
+END //
+
+CREATE PROCEDURE UnwatchedTVShows()
+BEGIN
+SELECT *
+FROM TVShows
+WHERE Views = 0;
+END //
+
+CREATE PROCEDURE UnviewedMedia()
+BEGIN
+CALL UnwatchedMovies();
+CALL UnplayedMusic();
+CALL UnwatchedTVShows();
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE TopRatedBooks()
+BEGIN
+SELECT *
+FROM Books
+WHERE Rating > 7;
+END //
+
+CREATE PROCEDURE TopRatedMovies()
+BEGIN
+SELECT *
+FROM Movies
+WHERE Rating > 7;
+END //
+
+CREATE PROCEDURE TopRatedMusic()
+BEGIN
+SELECT *
+FROM Music
+WHERE Rating > 7;
+END //
+
+CREATE PROCEDURE TopRatedTVShows()
+BEGIN
+SELECT *
+FROM TVShows
+WHERE Rating > 7;
+END //
+
+CREATE PROCEDURE TopRatedMedia()
+BEGIN
+CALL TopBooks();
+CALL TopMovies();
+CALL TopMusic();
+CALL TopTVShows();
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE RecentlyAddedBooks()
+BEGIN
+SELECT *
+FROM Books
+WHERE DateAdded > '2016-01-01';
+END //
+
+CREATE PROCEDURE RecentlyAddedMovies()
+BEGIN
+SELECT *
+FROM Movies
+WHERE DateAdded > '2016-01-01';
+END //
+
+CREATE PROCEDURE RecentlyAddedMusic()
+BEGIN
+SELECT *
+FROM Music
+WHERE DateAdded > '2016-01-01';
+END //
+
+CREATE PROCEDURE RecentlyAddedTVShows()
+BEGIN
+SELECT *
+FROM TVShows
+WHERE DateAdded > '2016-01-01';
+END //
+
+CREATE PROCEDURE RecentlyAddedMedia()
+BEGIN
+CALL JustAddedBooks();
+CALL JustAddedMovies();
+CALL JustAddedMusic();
+CALL JustAddedTVShows();
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE RecentlyReleasedBooks()
+BEGIN
+SELECT *
+FROM Books
+WHERE DateReleased > '2016-01-01';
+END //
+
+CREATE PROCEDURE RecentlyReleasedMovies()
+BEGIN
+SELECT *
+FROM Movies
+WHERE DateReleased > '2016-01-01';
+END //
+
+CREATE PROCEDURE RecentlyReleasedMusic()
+BEGIN
+SELECT *
+FROM Music
+WHERE DateReleased > '2016-01-01';
+END //
+
+CREATE PROCEDURE RecentlyReleasedTVShows()
+BEGIN
+SELECT *
+FROM TVShows
+WHERE DateReleased > '2016-01-01';
+END //
+
+CREATE PROCEDURE RecentlyReleasedMedia()
+BEGIN
+CALL JustReleasedBooks();
+CALL JustReleasedMovies();
+CALL JustReleasedMusic();
+CALL JustReleasedTVShows();
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE ViewMovie(movie VARCHAR(255))
+BEGIN
+UPDATE Movies
+SET Views = Views + 1
+WHERE Title = movie;
+END //
+
+CREATE PROCEDURE PlaySong(song VARCHAR(255))
+BEGIN
+UPDATE Music
+SET Plays = Plays + 1
+WHERE Title = song;
+END //
+
+CREATE PROCEDURE ViewEpisode(episode VARCHAR(255))
+BEGIN
+UPDATE TVShows
+SET Views = Views + 1
+WHERE Title = episode;
+END //
+
+DELIMITER ;
