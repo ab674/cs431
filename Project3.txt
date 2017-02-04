@@ -1,0 +1,252 @@
+CREATE TABLE UniversityDirectory (
+	Id INT(8),
+	FirstName VARCHAR(255),
+	LastName VARCHAR(255),
+	Email VARCHAR(255),
+	UserType VARCHAR(255),
+	PRIMARY KEY (Id) 
+) ENGINE=InnoDB;
+
+INSERT INTO UniversityDirectory VALUES(1, 'Abhinav', 'Bassi', 'ab111@uni.edu', 'Student');
+INSERT INTO UniversityDirectory VALUES(2, 'Dev', 'Patel', 'dp111@uni.edu', 'Student');
+INSERT INTO UniversityDirectory VALUES(3, 'Abinav', 'Parajuli', 'ap111@uni.edu', 'Student');
+INSERT INTO UniversityDirectory VALUES(4, 'Gopal', 'Ravindhran', 'gr111@uni.edu', 'Student');
+INSERT INTO UniversityDirectory VALUES(5, 'Bryan', 'Tulshi', 'bt111@uni.edu', 'Student');
+INSERT INTO UniversityDirectory VALUES(6, 'Rahul', 'Syal', 'rs111@uni.edu', 'Faculty');
+INSERT INTO UniversityDirectory VALUES(7, 'Khadir', 'Williams', 'kw111@uni.edu', 'Faculty');
+INSERT INTO UniversityDirectory VALUES(8, 'Rohit', 'Syal', 'rs222@uni.edu', 'Faculty');
+INSERT INTO UniversityDirectory VALUES(9, 'Christa', 'Abert', 'ca111@uni.edu', 'Faculty');
+INSERT INTO UniversityDirectory VALUES(10, 'Gopal', 'Ravi', 'gr222@uni.edu', 'Staff');
+INSERT INTO UniversityDirectory VALUES(11, 'Ayad', 'Akhtar', 'aa111@uni.edu', 'Staff');
+INSERT INTO UniversityDirectory VALUES(12, 'Margaret', 'Peterson', 'mp111@uni.edu', 'Staff');
+INSERT INTO UniversityDirectory VALUES(13, 'Haddix', 'Dervish', 'hd111@uni.edu', 'Executive');
+INSERT INTO UniversityDirectory VALUES(14, 'Childish', 'Gambino', 'cg111@uni.edu', 'Executive');
+INSERT INTO UniversityDirectory VALUES(15, 'Post', 'Malone', 'pm111@uni.edu', 'Executive');
+
+CREATE TABLE Students (
+	StudentId VARCHAR(255),
+	FirstName VARCHAR(255),
+	LastName VARCHAR(255),
+	Email VARCHAR(255),
+	Password VARCHAR(255),
+	PRIMARY KEY (StudentId) 
+) ENGINE=InnoDB;
+
+INSERT INTO Students VALUES('00000001', 'Abhinav', 'Bassi', 'ab111@uni.edu', 'Passab111');
+INSERT INTO Students VALUES('00000002', 'Dev', 'Patel', 'dp111@uni.edu', 'Passdp111');
+INSERT INTO Students VALUES('00000003', 'Abinav', 'Parajuli', 'ap111@uni.edu', 'Passap111');
+INSERT INTO Students VALUES('00000004', 'Gopal', 'Ravindhran', 'gr111@uni.edu', 'Passgr111');
+INSERT INTO Students VALUES('00000005', 'Bryan', 'Tulshi', 'bt111@uni.edu', 'Passbt111');
+
+CREATE TABLE Faculty (
+	FacultyId VARCHAR(255),
+	FirstName VARCHAR(255),
+	LastName VARCHAR(255),
+	Email VARCHAR(255),
+	Password VARCHAR(255),
+	Salary DOUBLE(8,2),
+	PRIMARY KEY (FacultyId)
+) ENGINE=InnoDB;
+
+INSERT INTO Faculty VALUES('F0000001', 'Rahul', 'Syal', 'rs111@uni.edu', 'Passrs111', 115000.00);
+INSERT INTO Faculty VALUES('F0000002', 'Khadir', 'Williams', 'kw111@uni.edu', 'Passkw111', 115000.00);
+INSERT INTO Faculty VALUES('F0000003', 'Rohit', 'Syal', 'rs222@uni.edu', 'Passrs222', 80000.00);
+INSERT INTO Faculty VALUES('F0000004', 'Christa', 'Abert', 'ca111@uni.edu', 'Passca111', 95000.00);
+
+CREATE TABLE Staff (
+	StaffId VARCHAR(255),
+	FirstName VARCHAR(255),
+	LastName VARCHAR(255),
+	Email VARCHAR(255),
+	Password VARCHAR(255),
+	PayRate DOUBLE(4,2),
+	PRIMARY KEY (StaffId)
+) ENGINE=InnoDB;
+
+INSERT INTO Staff VALUES('S0000001', 'Gopal', 'Ravi', 'gr222@uni.edu', 'Passgr222', 8.00);
+INSERT INTO Staff VALUES('S0000002', 'Ayad', 'Akhtar', 'aa111@uni.edu', 'Passaa111', 10.00);
+INSERT INTO Staff VALUES('S0000003', 'Margaret', 'Peterson', 'mp111@uni.edu', 'Passmp111', 10.00);
+
+CREATE TABLE Executive (
+	ExecutiveId VARCHAR(255),
+	FirstName VARCHAR(255),
+	LastName VARCHAR(255),
+	Email VARCHAR(255),
+	Password VARCHAR(255),
+	PRIMARY KEY (ExecutiveId)
+) ENGINE=InnoDB;
+
+INSERT INTO Executive VALUES('E0000001', 'Haddix', 'Dervish', 'hd111@uni.edu', 'Passhd111');
+INSERT INTO Executive VALUES('E0000002', 'Childish', 'Gambino', 'cg111@uni.edu', 'Passcg111');
+INSERT INTO Executive VALUES('E0000003', 'Post', 'Malone', 'pm111@uni.edu', 'Passpm111');
+
+CREATE TABLE Classes (
+	ClassId VARCHAR(255),
+	ClassName VARCHAR(255),
+	ProfessorName VARCHAR(255),
+	DateTime VARCHAR(255),
+	Room VARCHAR(255),
+	PRIMARY KEY (ClassId)
+) ENGINE=InnoDB;
+
+INSERT INTO Classes VALUES('CS 431 001', 'Introduction to Databases', 'Syal', 'MW 8:30-9:55', 'GITC 2300');
+INSERT INTO Classes VALUES('CS 431 101', 'Introduction to Databases', 'Syal', 'T 6:00-9:05', 'CKB 204');
+INSERT INTO Classes VALUES('CS 288 001', 'Intensive Programming in Linux', 'Williams', 'MW 11:30-12:55', 'TIER 114');
+
+CREATE TABLE Attendance (
+	ClassId VARCHAR(255),
+	StudentId VARCHAR(255)
+) ENGINE=InnoDB;
+
+INSERT INTO Attendance VALUES('CS 431 001', '00000001');
+INSERT INTO Attendance VALUES('CS 431 001', '00000004');
+INSERT INTO Attendance VALUES('CS 431 101', '00000002');
+INSERT INTO Attendance VALUES('CS 431 101', '00000005');
+INSERT INTO Attendance VALUES('CS 288 001', '00000003');
+
+CREATE TABLE Grades (
+	ClassId VARCHAR(255),
+	StudentId VARCHAR(255),
+	Grade INT(8)
+) ENGINE=InnoDB;
+
+INSERT INTO Grades VALUES('CS 431 001', '00000001', 90);
+INSERT INTO Grades VALUES('CS 431 001', '00000004', 100);
+INSERT INTO Grades VALUES('CS 431 101', '00000002', 85);
+INSERT INTO Grades VALUES('CS 431 101', '00000005', 87);
+
+DELIMITER //
+
+CREATE PROCEDURE DirectoryLookup()
+BEGIN
+SELECT *
+FROM UniversityDirectory;
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE CourseLookup()
+BEGIN
+SELECT *
+FROM Classes;
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE ChangeGrade(class VARCHAR(255), student VARCHAR(255), newgrade INT(8))
+BEGIN
+UPDATE Grades
+SET Grade = newgrade
+WHERE ClassId = class && StudentId = student;
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE AddGrade(class VARCHAR(255), student VARCHAR(255), grade INT(8))
+BEGIN
+INSERT INTO Grades VALUES(class, student, grade);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE ViewGrade(class VARCHAR(255), student VARCHAR(255))
+BEGIN
+SELECT *
+FROM Grades
+WHERE ClassId = class && StudentId = student;
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE AddCourse(class VARCHAR(255), name VARCHAR(255), professor VARCHAR(255), times VARCHAR(255), room VARCHAR(255))
+BEGIN
+INSERT INTO Classes VALUES(class, name, professor, times, room);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE AddStudent(class VARCHAR(255), student VARCHAR(255))
+BEGIN
+INSERT INTO Attendance VALUES(class, student);
+INSERT INTO Grades VALUES(class, student, 0);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE ChangeSalary(id VARCHAR(255), newsalary DOUBLE(8,2))
+BEGIN
+UPDATE Faculty
+SET Salary = newsalary
+WHERE FacultyId = id;
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE ChangeRate(id VARCHAR(255), newrate DOUBLE(8,2))
+BEGIN
+UPDATE Staff
+SET PayRate = newrate
+WHERE StaffId = id;
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE ChangeStudentsPassword(id VARCHAR(255), oldpassword VARCHAR(255), newpassword VARCHAR(255))
+BEGIN
+UPDATE Students
+SET Password = newpassword
+WHERE StudentId = id && Password = oldpassword;
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE ChangeFacultyPassword(id VARCHAR(255), oldpassword VARCHAR(255), newpassword VARCHAR(255))
+BEGIN
+UPDATE Faculty
+SET Password = newpassword
+WHERE FacultyId = id && Password = oldpassword;
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE ChangeStaffPassword(id VARCHAR(255), oldpassword VARCHAR(255), newpassword VARCHAR(255))
+BEGIN
+UPDATE Staff
+SET Password = newpassword
+WHERE StaffId = id && Password = oldpassword;
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE ChangeExecutivePassword(id VARCHAR(255), oldpassword VARCHAR(255), newpassword VARCHAR(255))
+BEGIN
+UPDATE Executive
+SET Password = newpassword
+WHERE ExecutiveId = id && Password = oldpassword;
+END //
+
+DELIMITER ;
